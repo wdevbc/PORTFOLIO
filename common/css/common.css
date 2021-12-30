@@ -1,0 +1,11 @@
+#header {position:absolute;left:0;top:0;width:100%;padding:20px;box-sizing:border-box;font-size:20px;box-shadow:1px 0px 1px var(--black-color);background-color:var(--white-color)}
+#nav {display:flex;max-width:1180px;width:80%;margin:0 auto}
+.logo {flex:1}
+.logo > h1 {display:inline-block}
+.logo > h1:hover {transform:translateY(-2px)}
+.gnb {text-align:right}
+.gnb > li {display:inline-block;padding:0 10px}
+.gnb > li a:after {content:'';display:block;border-bottom:8px dotted transparent;transition:0.7s}
+.gnb > li:hover {transform:translateY(-2px);}
+.gnb > li a:hover:after {border-bottom:2px dashed #000}
+.container {height:100vh;background-color:rgba(180,180,180,0.1)}
