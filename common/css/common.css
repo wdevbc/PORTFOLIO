@@ -1,11 +1,23 @@
-#header {position:absolute;left:0;top:0;width:100%;padding:20px;box-sizing:border-box;font-size:20px;box-shadow:1px 0px 1px var(--black-color);background-color:var(--white-color)}
-#nav {display:flex;max-width:1180px;width:80%;margin:0 auto}
+#header {position:fixed;left:50%;transform:translateX(-50%);top:50px;width:60%;padding:20px;padding-top:28px;box-sizing:border-box;border-radius:42px;font-size:20px;background-color:rgba(255,255,255,0.1);z-index:10}
+#nav {display:flex;max-width:1180px;width:90%;margin:0 auto}
+.container {background-color:rgba(180,180,180,0.1)}
 .logo {flex:1}
 .logo > h1 {display:inline-block}
 .logo > h1:hover {transform:translateY(-2px)}
 .gnb {text-align:right}
 .gnb > li {display:inline-block;padding:0 10px}
+.gnb > li:hover {transform:translateY(-2px)}
 .gnb > li a:after {content:'';display:block;border-bottom:8px dotted transparent;transition:0.7s}
-.gnb > li:hover {transform:translateY(-2px);}
-.gnb > li a:hover:after {border-bottom:2px dashed #000}
-.container {height:100vh;background-color:rgba(180,180,180,0.1)}
+.gnb > li a:hover:after {border-bottom:2px solid var(--black-color)}
+/* fullpage */
+#fullpage {top:0}
+#fp-nav {right:0}
+#section01 {background:url(../images/kv01.jpg) no-repeat;background-size:cover;opacity:0.7}
+.div {height:500px}
+#section05{background-color:#f00}
+#section05, .fp-tableCell {height: auto !important}
+.text__wrap {position:absolute;left:50%;top:calc(50% + 75px);transform:translate(-50%, -50%);color:var(--white-color);font-size:40px}
+/* text__wrap-typing */
+.txt {width:26ch;animation:typing 2s steps(22), blink .6s step-end infinite alternate;white-space:nowrap;overflow:hidden;border-right:3px solid;text-shadow:4px 1px 4px var(--black-color);} 
+@keyframes typing {from{width:0}}
+@keyframes blink {50%{border-color:transparent}}
