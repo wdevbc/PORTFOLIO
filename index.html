@@ -54,22 +54,46 @@
 	var $fullPage = $("#fullpage");
 	var $fpNav = $("#menu");
 	$fullPage.fullpage({
-        
+        css3: true,
+        easingcss3: 'cubic-bezier(0.175, 0.885, 0.5, 1.1)',
 		anchors: ['home', 'about', 'skills', 'portfolio'],
 		menu: '.gnb',
-		scrollingSpeed: 1000,
+		scrollingSpeed: 500,
 		navigation: true,
 		afterLoad: function (anchorLink, index) { // move end
 			$fpNav.addClass("active");
 			if (index === 1) {
-
-			} else if (index === 2) {
-
-			} else if (index === 3) {
-
+               
+			} else if (index => 2) {
+                
 			}
-            
-		}
+        },
+        onLeave: function (anchorLink, index) {
+            if (index === 1){
+                $('#header').removeClass('on');
+                $('#fp-nav>ul>li>a>span').css('background','#fff')
+            }
+        else if (index => 2) {
+                $('#header').addClass('on')
+                $('#fp-nav>ul>li>a>span').css('background','#333')
+			}
+        }
 	});
+</script>
+<script>
+    $(function() {
+        if($('body').hasClass('fp-viewing-about')) {
+            $('#header').css('backgroundColor','#ccc');
+        }
+
+        // function bodyOn(){
+        //     var abTop = $('about').offset().top;
+        //     var scroll = document.documentElement.scrollTop;
+        //     $("header")[scroll > abTop-1 ? 'addClass' : 'removeClass']('top');
+        // };
+
+        // bodyOn();
+    });
+
 </script>
 </html>
