@@ -89,7 +89,7 @@
                 </div>
                 <div id="section03" class="section skills">
                     <h2 class="section__title section__title--dark">SKILLS</h2>
-                    <div class="section__contents" data-aos="fade-up" data-aos-duration="500">
+                    <div class="section__contents" data-aos="fade-up" data-aos-duration="200">
                         <ul class="skills__list">
                             <li>
                                 <div class="skills__progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="--value:99">
@@ -131,6 +131,9 @@
                 </div>
                 <div id="section04" class="section">
                     <h2 class="section__title">PORTFOLIO</h2>
+                    <div class="section__contents">
+                        <iframe src="https://wdev.kr/php/board/git-board.php" frameborder="0"></iframe>
+                    </div>
                 </div>
                 <div id="section05" class="section">
                     © Wdev.kr All Rights Reserved.
@@ -170,9 +173,9 @@
 			}
         },
         afterLoad: function(){       
-        var section = ['1', '2', '3', '4', '5'];   // duplicated table of anchors name
+        var section = ['1', '2', '3', '4', '5']
         for (var i = 0; i < section.length; i++) {
-            $('#section0'+ [i] +'.active .aos-init').addClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
+            $('#section0'+ [i] +'.active .aos-init').addClass('aos-animate')
         }
     }
 	});
@@ -180,6 +183,6 @@
 <script src="common/js/aos.js"></script>
 <script>
     AOS.init();  // AOS initiation
-    $('.aos-init').removeClass('aos-animate'); // remove ALL classes which triggers animation in document
+    $('.aos-init').removeClass('aos-animate')
 </script>
 </html>
